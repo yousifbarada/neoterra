@@ -12,4 +12,6 @@ rasterio
 scipy
 matplotlib
 requests
-keras
+tqdm
+transformers
+tensorflow

@@ -933,12 +933,7 @@ def cloud_segmentation_tool(image_path: str) -> dict:
     }
 # ----------------- Add these helpers + generator tool -----------------
 import os
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
-from torchvision.models import resnet34
-import gradio as gr
+from tensorflow.keras.models import load_model
 from pathlib import Path
 import numpy as np
 def normalize_to_uint8(arr):
