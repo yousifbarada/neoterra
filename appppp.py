@@ -31,11 +31,11 @@ import matplotlib.pyplot as plt
 from keras.models import load_model
 from scipy.ndimage import label as ndi_label
 # import gradio as gr
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
-from torchvision.models import resnet34
+# import torch
+# import torch.nn as nn
+# import torch.nn.functional as F
+# from torch.utils.data import Dataset, DataLoader
+# from torchvision.models import resnet34
 from pathlib import Path
 import json
 import matplotlib.pyplot as plt
