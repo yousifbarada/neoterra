@@ -933,7 +933,7 @@ def cloud_segmentation_tool(image_path: str) -> dict:
     }
 # ----------------- Add these helpers + generator tool -----------------
 import os
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 from pathlib import Path
 import numpy as np
 def normalize_to_uint8(arr):
