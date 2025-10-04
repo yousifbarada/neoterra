@@ -106,12 +106,22 @@ from langchain_core.tools import tool
 import subprocess
 import mimetypes
 
-import os
+# Remove this line (it causes ImportError):
+# import os
+# from streamlit.secrets import GOOGLE_API_KEY
 
-# Replace with your actual key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAJSz7rhuluLs3WsdNoj90B0Jitv_dyIS0"
+# Instead, use the standard way to read secrets from .streamlit/secrets.toml in Streamlit:
+try:
+    import streamlit as st
+    GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+except (ImportError, KeyError, AttributeError):
+    # Fallback: try to read from environment or set a default (not recommended for production)
+    GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "")
+
+os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+
 MODEL_INPUT_SIZE = (384, 384)
-MODEL_INPUT_SHAPE= MODEL_INPUT_SIZE
+MODEL_INPUT_SHAPE = MODEL_INPUT_SIZE
 #WATER_MODEL_PATH = '/kaggle/input/water-segmentation-3-deeplabv3-model/keras/default/1/deeplabv3_model.keras'
 OIL_MODEL_PATH = "D:\\Narss Data\\Oil_Spill_Model_Version_2.keras"
 # IMAGE_PATH = "/kaggle/working/sentinel1_image.tif"
