@@ -108,12 +108,3 @@ import mimetypes
 
 import os
 
-# Replace with your actual key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAJSz7rhuluLs3WsdNoj90B0Jitv_dyIS0"
-MODEL_INPUT_SIZE = (384, 384)
-MODEL_INPUT_SHAPE= MODEL_INPUT_SIZE
-#WATER_MODEL_PATH = '/kaggle/input/water-segmentation-3-deeplabv3-model/keras/default/1/deeplabv3_model.keras'
-OIL_MODEL_PATH = "D:\\Narss Data\\Oil_Spill_Model_Version_2.keras"
-# IMAGE_PATH = "/kaggle/working/sentinel1_image.tif"
-cloud_segment_bath ='D:\\Narss Data\\cloud_segmentation_model.pth'
-cloud_Removal_bath ='D:\\Narss Data\\modelPix.h5'
