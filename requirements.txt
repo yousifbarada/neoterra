@@ -12,6 +12,8 @@ rasterio
 scipy
 matplotlib
 requests
-tqdm
-transformers
-tensorflow
+tensorflow==2.14.0
+torch
+pathlib
+mimetypes
+typing

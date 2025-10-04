@@ -30,7 +30,7 @@ import cv2
 import matplotlib.pyplot as plt
 from keras.models import load_model
 from scipy.ndimage import label as ndi_label
-import gradio as gr
+# import gradio as gr
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
