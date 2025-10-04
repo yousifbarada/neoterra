@@ -1,0 +1,119 @@
+import re
+import os
+import numpy as np
+from PIL import Image
+import rasterio
+import re
+import os
+import numpy as np
+from PIL import Image
+import rasterio
+from langchain_core.messages import HumanMessage, AIMessage
+
+import tempfile
+from langgraph.checkpoint.memory import MemorySaver
+import os
+from PIL import Image
+import numpy as np
+from langchain_core.prompts import ChatPromptTemplate
+from pydantic import BaseModel, Field
+from typing import Annotated, Literal, Sequence, TypedDict
+from langgraph.graph.message import add_messages
+from langchain_core.tools import StructuredTool, tool
+from langchain_core.messages import BaseMessage, ToolMessage, SystemMessage
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langgraph.prebuilt import ToolNode, tools_condition
+from langgraph.graph.message import add_messages
+import json
+import rasterio
+import cv2
+import matplotlib.pyplot as plt
+from keras.models import load_model
+from scipy.ndimage import label as ndi_label
+import gradio as gr
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.utils.data import Dataset, DataLoader
+from torchvision.models import resnet34
+from pathlib import Path
+import json
+import matplotlib.pyplot as plt
+import warnings
+# warnings.filterwarnings('ignore')
+# langgraph imports
+from langgraph.graph import StateGraph, START, END
+
+# for optional web search (simple HTTP example)
+import requests
+from typing import Optional, Tuple
+
+import requests
+from pathlib import Path
+from langchain_core.tools import tool
+import subprocess
+import mimetypes
+from scipy.ndimage import median_filter, gaussian_filter
+from google.api_core import exceptions as google_ex
+
+import rasterio
+import tempfile
+import os
+import rasterio
+import numpy as np
+from PIL import Image
+from scipy.ndimage import median_filter, gaussian_filter
+from langgraph.checkpoint.memory import MemorySaver
+import os
+from PIL import Image
+import numpy as np
+from langchain_core.prompts import ChatPromptTemplate
+from pydantic import BaseModel, Field
+from typing import Annotated, Literal, Sequence, TypedDict
+from langgraph.graph.message import add_messages
+from langchain_core.tools import StructuredTool, tool
+from langchain_core.messages import BaseMessage, ToolMessage, SystemMessage
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langgraph.prebuilt import ToolNode, tools_condition
+from langgraph.graph.message import add_messages
+import json
+import rasterio
+import cv2
+import matplotlib.pyplot as plt
+from keras.models import load_model
+from scipy.ndimage import label as ndi_label
+import gradio as gr
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.utils.data import Dataset, DataLoader
+from torchvision.models import resnet34
+from pathlib import Path
+import json
+import matplotlib.pyplot as plt
+import warnings
+# warnings.filterwarnings('ignore')
+# langgraph imports
+from langgraph.graph import StateGraph, START, END
+
+# for optional web search (simple HTTP example)
+import requests
+from typing import Optional, Tuple
+
+import requests
+from pathlib import Path
+from langchain_core.tools import tool
+import subprocess
+import mimetypes
+
+import os
+
+# Replace with your actual key
+os.environ["GOOGLE_API_KEY"] = "AIzaSyAJSz7rhuluLs3WsdNoj90B0Jitv_dyIS0"
+MODEL_INPUT_SIZE = (384, 384)
+MODEL_INPUT_SHAPE= MODEL_INPUT_SIZE
+#WATER_MODEL_PATH = '/kaggle/input/water-segmentation-3-deeplabv3-model/keras/default/1/deeplabv3_model.keras'
+OIL_MODEL_PATH = "D:\\Narss Data\\Oil_Spill_Model_Version_2.keras"
+# IMAGE_PATH = "/kaggle/working/sentinel1_image.tif"
+cloud_segment_bath ='D:\\Narss Data\\cloud_segmentation_model.pth'
+cloud_Removal_bath ='D:\\Narss Data\\modelPix.h5'
